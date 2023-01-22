@@ -1,0 +1,78 @@
+<div class="card">
+    <h5 class="card-header card-header-color">Registration Form</h5>
+    <div class="card-body">
+        <form [formGroup]="addForm">
+            <div class="upper-div">
+                <div></div>
+                <div>
+                    <button class="btn btn-primary" (click)="goToList()">go to List</button>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="form-group col-3">
+                    <label>Title</label>
+                    <select class="form-control" formControlName="title">
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Ms">Ms</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-4">
+                    <label>First Name</label>
+                    <input type="text" class="form-control" formControlName="firstName">
+                </div>
+
+                <div class="form-group col-4">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" formControlName="lastName">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-3">
+                    <label>Email</label>
+                    <input type="email" class="form-control" formControlName="email">
+                </div>
+
+                <div class="form-group col-4">
+                    <label>D.O.B</label>
+                    <input type="date" class="form-control" formControlName="dob">
+                </div>
+
+                <div class="form-group col-4">
+                    <label>Password</label>
+                    <input type="password" class="form-control" formControlName="password">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-3">
+                    <label>Confirm Password</label>
+                    <input type="password" class="form-control" formControlName="confirmPassword">
+                </div>
+            </div>
+
+            <br />
+            <div class="row">
+                <div class="form-group form-check ">
+                    <label for="acceptTerms" class="form-check-label" >Accept terms & conditions</label>
+                    <input type="checkbox" class="form-control form-check-input" id="acceptTerms" formControlName="acceptTerms">
+                </div>
+            </div>
+
+
+            <div class="row mb-3">
+                <div class="form-group text-center ">
+                <button type="submit" class="btn btn-success me-2" (click)="onSubmit($event)">{{buttonText}}</button>
+                <button type="button" class="btn btn-danger" (click)="onCancel()">cancel</button>
+            </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+

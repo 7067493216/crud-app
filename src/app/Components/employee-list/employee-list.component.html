@@ -1,0 +1,38 @@
+<div class="card">
+    <h5 class="card-header card-header-list-color">User List</h5>
+    <div class="card-body">
+        <!-- <button class="btn btn-primary">go to List</button> -->
+        <div class="upper-div">
+            <div></div>
+            <div>
+                <button class="btn btn-primary" (click)="goToForm()">go to Form</button>
+            </div>
+        </div>
+        <br/>
+        <div class="form-row">
+            <div class="form-group col">
+                <table class="table  table-striped">
+                    <tr>
+                        <th>Title</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>DOB</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr *ngFor="let user of users">
+                        <td>{{user.title}}</td>
+                        <td>{{user.firstName}}</td>
+                        <td>{{user.lastName}}</td>
+                        <td>{{user.dob}}</td>
+                        <td>{{user.email}}</td>
+                        <td>
+                            <i class="fa fa-edit" style="color:forestgreen" (click)="onEdit(user.id)"></i>
+                            <i class="fa fa-trash-o" style="color:red" (click)="onDelete(user.id)"></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
